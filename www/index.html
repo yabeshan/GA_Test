@@ -42,12 +42,14 @@
 
     <script type="text/javascript" src="GALocalStorage.js"></script>
     <script>
-        ga_storage._setAccount('UA-57490660-1'); //Replace with your own
-        ga_storage._trackPageview('/index.html');
+        ga_storage._setAccount('UA-57490660-2'); //Replace with your own
+//        ga_storage._trackPageview('/index.html');
 
+        var count = 0;
         setInterval(function(){
-            ga_storage._trackPageview('/index.html');
-        },1000);
+            count++;
+            ga_storage._trackPageview('go_page_offline_'+count, 'title');
+        },5000);
 
     </script>
 
